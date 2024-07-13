@@ -1,0 +1,251 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background: linear-gradient(to right, #ed4264, #ffedbc);
+    margin: 0;
+    padding: 0;
+}
+
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    /* background-color: #EAD2AC; */
+    /* border-bottom: 1px solid #ddd; */
+}
+
+header h1 {
+    margin: 0;
+    margin-left: 30px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin-right: 20px;
+    padding: 0;
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* Intro section styles */
+.intro {
+    text-align: center;
+    /* padding: 50px 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+}
+
+.intro-content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8%;
+    gap: 35px;
+}
+
+.intro-img {
+    width: 250px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 70px;
+}
+
+.intro-text {
+    text-align: left;
+}
+
+.intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    word-spacing: 4px;
+    max-width: 600px;
+    line-height: 1.0;
+}
+
+/* Project section styles */
+.project-section {
+    text-align: center;
+    padding: 20px;
+}
+.project-section h2{
+    font-size: 35px;
+}
+
+.slider {
+    position: relative;
+    margin: 0 auto;
+    width: 150%;
+    max-width: 1200px;
+    overflow: hidden;
+    height: 650px;
+}
+
+.slides {
+    display: flex;
+}
+
+.slide {
+    flex: 0 0 100%; /* Each slide takes full width of the container */
+}
+
+.slide img {
+    width: 100%; /* Make the image fill the slide */
+    height: 600px;
+    background-image: cover;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+
+
+.skills-section {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.skills-list li {
+    font-size: 1.2rem;
+    margin: 10px;
+    padding: 15px 20px;
+    /* background-color: #107d9b; */
+    background: linear-gradient(to right, #00b09b, #96c93d);
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+}
+
+.skills-list li i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+
+.skills-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Contact section styles */
+.profile {
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.profile .links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #0073b1;
+    
+}
+
+.profile .links a:hover {
+    text-decoration: underline;
+}
+footer {
+    text-align: center;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .project-section, .skills-section, .contact-section {
+        padding: 30px 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        padding: 30px 10px;
+    }
+
+    .intro-img {
+        width: 200px;
+    }
+
+    .skills-section ul {
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+    .intro h2 {
+        font-size: 2em;
+    }
+
+    .project-section, .skills-section, .contact-section {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .slide {
+        padding: 10px;
+    }
+
+    .prev, .next {
+        padding: 5px;
+    }
+}
+
